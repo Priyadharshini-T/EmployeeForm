@@ -1,0 +1,26 @@
+
+<form novalidate>
+  <button value="Add" (click)="redirect()">add</button>
+  <br/>
+  <br/>
+  <router-outlet></router-outlet>
+  <table>
+    <tr>
+      <th>EmpId</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Salary</th>
+      <th>Action</th>
+    </tr>
+    
+        <tr *ngFor="let employees of employee">
+            <td>{{employees.EmpId}}</td>
+            <td>{{employees.EmpName}}</td>
+            <td>{{employees.EmpAge}}</td>
+            <td>{{employees.Salary}}</td>
+            
+          </tr>
+
+        
+  </table>
+</form>
